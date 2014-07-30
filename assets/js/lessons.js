@@ -48,8 +48,8 @@ var lessons = {
             script.setAttribute("src", "https://gist.github.com/" + gistId + ".json?callback=" + callbackName);
             $.getJSON("https://gist.github.com/" + gistId + ".json?callback=?", function(data){
 
-                var cssId = '#gistCSS';  // you could encode the css path itself to generate id..
-                if ($(cssId).length <= 0){
+                var cssId = 'gistCSS';  // you could encode the css path itself to generate id..
+                if ($('#'+cssId).length <= 0){
                     var head  = document.getElementsByTagName( "head" )[0];
                     var link  = document.createElement('link');
                     link.id   = cssId;
