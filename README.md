@@ -11,7 +11,7 @@ The landing page for each lesson would use the data attribute on the #content di
 
 ###Lesson Files###
 
-Store lesson files under /lessons/
+Store lesson files under /lessons/*[lesson-plan]*/
 
     - Lessons should include an index.html file and a sections.json file.
 
