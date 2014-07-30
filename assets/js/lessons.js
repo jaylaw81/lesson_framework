@@ -6,7 +6,6 @@ var content = document.querySelector('#content')
 var lessons = {
     gistArray: [],
     init: function( ){
-        console.log(lessonPlan);
 
         var def = [];
         var res = [];
@@ -17,9 +16,23 @@ var lessons = {
 
         $.when.apply($, def).done(function() {
             lessons.embedGists();
+            lessons.getNav(lessonPlan);
         });
 
 
+    },
+
+    getNav: function(lessonPlan){
+        $.getJSON('/lessons/' + lessonPlan + '/sections.json', function(data){
+
+            for(item in data.navItems){
+                var navLabel = data.navItems[item].labelName;
+                var navSection = data.navItems[item].section;
+                var html = '<li><a href="#'+navSection+'">'+navLabel+'</a></li>';
+                $('#navigation ul').append(html);
+            }
+
+        });
     },
 
     embedGists: function(){
