@@ -1,15 +1,15 @@
 lesson_framework
 ================
 
-The Lesson Framework currently is in beta.
+The Lesson Framework currently is in *beta*.
 
-*Identifying correct Lesson*
+##Identifying correct Lesson##
 
 The landing page for each lesson would use the data attribute on the #content div.
 
     <section id="content" data-lesson="html-101"></section>
 
-*Lesson Files*
+##Lesson Files##
 
 Store lesson files under /lessons/
 
