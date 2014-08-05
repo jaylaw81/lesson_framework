@@ -36,6 +36,7 @@ var lessons = {
     },
 
     embedGists: function(){
+
         var gists = $('.gist-code');
         var scripts = [];
 
